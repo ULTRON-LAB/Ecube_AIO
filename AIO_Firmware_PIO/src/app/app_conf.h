@@ -30,7 +30,7 @@
 #endif
 
 // 文件管理器APP
-#define APP_FILE_MANAGER_USE 0
+#define APP_FILE_MANAGER_USE 1
 #if APP_FILE_MANAGER_USE
 #include "app/file_manager/file_manager.h"
 #endif
