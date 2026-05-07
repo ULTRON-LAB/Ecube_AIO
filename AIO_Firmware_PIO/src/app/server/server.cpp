@@ -174,6 +174,18 @@ static void server_process(AppController *sys,
             
             if(run_data->wifi_connected)
                 {
+                    if(WiFi.localIP() == IPAddress(0, 0, 0, 0))
+                    {
+                     display_setting(
+                    "WebServer Start",
+                    "Domain: Ecube",
+                    "Wait...",
+                     WiFi.softAPIP().toString().c_str(),
+                     LV_SCR_LOAD_ANIM_NONE);
+                    }
+
+            else
+
             display_setting(
                 "WebServer Start",
                 "Domain: Ecube",
